@@ -1,0 +1,31 @@
+<html>
+<head>
+    <title>Be My Valentine</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+        .no-button {
+            position: absolute;
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-pink-100 flex items-center justify-center min-h-screen relative">
+    <div class="text-center z-10">
+        <h1 class="text-4xl font-bold text-red-600 mb-8">Will You Be My Valentine?</h1>
+        <div class="flex justify-center space-x-4">
+            <button class="bg-green-500 text-white px-6 py-3 rounded-full text-xl hover:bg-green-600 focus:outline-none" onclick="window.location.href='file:///C:/Users/saanvi/OneDrive/Desktop/valentine/valentineweb3.html'">Yes</button>
+            <button class="bg-red-500 text-white px-6 py-3 rounded-full text-xl no-button focus:outline-none">No</button>
+        </div>
+    </div>
+    <img alt="A romantic background with hearts and flowers" class="absolute inset-0 w-full h-full object-cover opacity-50" height="1080" src="https://storage.googleapis.com/a1aa/image/I6FramJBdbvvFFAFoBD9Svs6r91devN0rdWVFtdVAHE.jpg" width="1920"/>
+    <script>
+        document.querySelector('.no-button').addEventListener('mouseover', function() {
+            const x = Math.random() * (window.innerWidth - this.offsetWidth);
+            const y = Math.random() * (window.innerHeight - this.offsetHeight);
+            this.style.left = `${x}px`;
+            this.style.top = `${y}px`;
+        });
+    </script>
+</body>
+</html>
